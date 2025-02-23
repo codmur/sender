@@ -12,8 +12,8 @@ app.use(express.json());
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Usa el servicio que prefieras
   auth: {
-    user: process.env.USERMAIL, 
-    pass: process.env.PASSKEY 
+    user: `${process.env.USERMAIL}`, 
+    pass: `${process.env.PASSKEY}` 
   }
 });
 
@@ -33,7 +33,7 @@ app.post('/sender', async (req, res) => {
 
     // Configura los detalles del correo
     const mailOptions = {
-      from: 'juanpenalversa@gmail.com', 
+      from: `${process.env.USERMAIL}`, 
       to: to, 
       cc: cc, 
       subject: subject, 
