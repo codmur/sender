@@ -60,5 +60,5 @@ app.post('/sender', async (req, res) => {
 
 // Inicia el servidor
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
