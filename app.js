@@ -5,7 +5,7 @@ import z from "zod"
 import { corsMiddleware } from './middlewares/cors.js'
 
 const app = express();
-const port = 1234;
+const PORT = process.env.PORT ?? 1234
 
 // Middleware para parsear el cuerpo de la solicitud
 app.use(express.json());
@@ -59,6 +59,6 @@ app.post('/sender', async (req, res) => {
 });
 
 // Inicia el servidor
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Servidor escuchando en http://localhost:${port}`);
 });
