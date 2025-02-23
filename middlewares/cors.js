@@ -4,7 +4,7 @@ const ACCEPTED_ORIGINS = [
   'http://localhost:5173',
   'https://victoriaseguros.com',
   'http://victoriaseguros.com',
-  '*'
+  'https://bespoke-tartufo-b225e9.netlify.app'
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
