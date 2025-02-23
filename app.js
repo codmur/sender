@@ -1,19 +1,19 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const { z } = require('zod');
+import 'dotenv/config'
+import express from "express"
+import nodemailer from "nodemailer"
+import z from "zod"
 
 const app = express();
 const port = 3000;
 
 // Middleware para parsear el cuerpo de la solicitud
 app.use(express.json());
-
 // Configura el transporte de Nodemailer (esto puede variar dependiendo del servicio que uses)
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Usa el servicio que prefieras
   auth: {
-    user: 'juanpenalversa@gmail.com', // Tu correo de Gmail
-    pass: 'waxy bhel pltx jutb' // Tu contraseña o contraseña de aplicación de Google
+    user: process.env.USERMAIL, 
+    pass: process.env.PASSKEY 
   }
 });
 
