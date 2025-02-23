@@ -5,7 +5,7 @@ import z from "zod"
 import { corsMiddleware } from './middlewares/cors';
 
 const app = express();
-const port = 3000;
+const port = 1234;
 
 // Middleware para parsear el cuerpo de la solicitud
 app.use(express.json());
