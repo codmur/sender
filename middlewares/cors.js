@@ -1,7 +1,9 @@
 import cors from 'cors'
 
 const ACCEPTED_ORIGINS = [
-  '*'
+  'http://localhost:5173/',
+  'https://victoriaseguros.com',
+  'http://victoriaseguros.com',
 ]
 
 export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) => cors({
