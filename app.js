@@ -8,8 +8,8 @@ const app = express();
 const PORT = process.env.PORT ?? 1234
 
 // Middleware para parsear el cuerpo de la solicitud
+app.use(corsMiddleware());
 app.use(express.json());
-app.use(corsMiddleware())
 
 // Configura el transporte de Nodemailer (esto puede variar dependiendo del servicio que uses)
 const transporter = nodemailer.createTransport({
