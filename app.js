@@ -2,14 +2,15 @@ import 'dotenv/config'
 import express from "express"
 import nodemailer from "nodemailer"
 import z from "zod"
-import { corsMiddleware } from './middlewares/cors';
+import { corsMiddleware } from './middlewares/cors.js'
 
 const app = express();
 const port = 1234;
 
 // Middleware para parsear el cuerpo de la solicitud
 app.use(express.json());
-app.use(corsMiddleware());
+app.use(corsMiddleware())
+
 // Configura el transporte de Nodemailer (esto puede variar dependiendo del servicio que uses)
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Usa el servicio que prefieras
